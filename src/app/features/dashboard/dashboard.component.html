@@ -1,0 +1,54 @@
+<div class="dashboard">
+  <div class="content">
+    <div class="media-list">
+      <section>
+        <h2>Movies <span>Trending Now</span></h2>
+        <div class="cards">
+          <div class="card" *ngFor="let movie of movies">
+            <a routerLink="/card-component" routerLinkActive="active">
+              <img [src]="movie.image" alt="{{ movie.title }}">
+              <p>{{ movie.title }}</p>
+            </a>
+          </div>
+        </div>
+      </section>
+      
+      <section>
+        <h2>TV Shows <span>Trending Now</span></h2>
+        <div class="cards">
+          <div class="card" *ngFor="let show of shows">
+            <a routerLink="/card-component" routerLinkActive="active">
+              <img [src]="show.image" alt="{{ show.title }}">
+              <p>{{ show.title }}</p>
+            </a>
+          </div>
+        </div>
+      </section>
+      
+      <section> 
+        <h2>Anime <span>Trending Now</span></h2>
+        <div class="cards">
+          <div class="card" *ngFor="let anime of animes">
+            <a routerLink="/card-component" routerLinkActive="active">
+              <img [src]="anime.image" alt="{{ anime.title }}">
+              <p>{{ anime.title }}</p>
+            </a>
+          </div>
+        </div>
+      </section>
+      
+      <section>
+        <h2>Books <span>Trending Now</span></h2>
+        <div class="cards">
+          <div class="card" *ngFor="let book of books">
+            <a routerLink="/card-component" routerLinkActive="active">
+            <img [src]="book.image" alt="{{ book.title }}">
+            <p>{{ book.title }}</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <app-filters></app-filters>
+  </div>
+</div>
